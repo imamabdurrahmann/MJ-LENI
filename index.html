@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOKO MJ LENI MANNA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="brand-title">TOKO MJ LENI MANNA GoldHen PS4</h1>
+<div class="contact-box">
+    <div class="wa-badge">WhatsApp: 0852-2888-8630</div>
+</div>
+<div id="msgs" class="fw-title">PS4 Exploit &amp; Multi Firmware Host</div>
+<hr>
+<div id="device-info" style="display: inline-block; background: rgba(3, 14, 34, 0.8); border: 1px solid rgba(0, 200, 255, 0.35); border-radius: 25px; padding: 8px 24px; font-size: 15px; margin: 5px auto 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); backdrop-filter: blur(8px);">
+    <span id="detected-text" style="color: #00e5ff; font-weight: 600;">Detecting device...</span>
+</div>
+<br>
+<div id=menu>
+<h1 style="font-size: 17px; color: #00e5ff; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin: 0 0 18px 0; text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);">Select Your Firmware</h1>
+<button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 13.52 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('g2all/index.html')"> GoldHEN Multi FW </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('505/index.html')"> 5.05 FW v2.5 </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('672goldhen/index.html')"> 6.72 FW GoldHEN </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('672/index.html')"> 6.72 FW v3.0 </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('900goldhen/index.html')"> 9.00 FW GoldHEN </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('900v3/index.html')"> 9.00 FW v3.0 </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Exploit &amp; Multi Firmware Host'" onclick="location.replace('restore/index.html')"> Restore Host </button>
+<br>
+<div class="credits-box">
+    <span class="credits-title">Designed by: <span class="credits-names">Michael Joanes, Andree Garshia J and Imam Abdurrahman</span></span>
+    <span class="credits-sub">A special thanks to all the devs on the scene.</span>
+</div>
+</div>
+<script>
+function detectDevice() {
+    var ua = navigator.userAgent;
+    var match = ua.match(/PlayStation 4[ /]([\d.]+)/i);
+    var devText = document.getElementById("detected-text");
+    var devBox = document.getElementById("device-info");
+    
+    if (devText && devBox) {
+        if (match) {
+            var fw = match[1];
+            devText.innerHTML = "&#127918; Console Detected: PlayStation 4 (Firmware " + fw + ")";
+            devText.style.color = "#00ffcc";
+            devBox.style.borderColor = "rgba(0, 255, 204, 0.5)";
+        } else {
+            devText.innerHTML = "&#128187; Device Detected: PC / Laptop (Preview Mode)";
+            devText.style.color = "#ffd700";
+            devBox.style.borderColor = "rgba(255, 215, 0, 0.4)";
+        }
+    }
+}
+detectDevice();
+document.addEventListener("DOMContentLoaded", detectDevice);
+</script>
+</body>
+</html>
